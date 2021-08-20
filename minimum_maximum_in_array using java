@@ -1,0 +1,38 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main {
+    
+    
+    static int[] sort_arr(int arr[], int n)
+    {
+        
+        
+        Arrays.sort(arr);
+        return arr;
+        
+        
+    }
+    
+    public static void main(String args[])
+    {
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size if array");
+        int N = sc.nextInt();
+        int arr[] = new int[N];
+        System.out.println("ENter the values to array");
+        for(int i=0; i<N; i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+        System.out.println("ENter the value of K");
+        int K = sc.nextInt();
+        
+        
+        //int arr [] = {200, 1, 456, 324, 12, 72};
+        
+        Arrays.sort(arr);
+        System.out.println("The kth mininmun element is "+arr[K-1]);
+        System.out.println("The kth maximum element is "+arr[N-K]);
+    }
+}
